@@ -74,4 +74,26 @@ class MemoryMemberRepositoryTest{
             System.out.println(result.get(i).getId()+" : "+result.get(i).getName());
         }
     }
+
+    @Test
+    public void mm(){
+        Member m1 = new Member();
+        m1.setName("JungSu1");
+
+        Member m2 = new Member();
+        m2.setName("JungSu2");
+
+        Member m3 = new Member();
+        m3.setName("JungSu3");
+
+        repository.save(m1);
+        repository.save(m2);
+        repository.save(m3);
+
+        repository.printStore();
+        System.out.println(repository.findAll());
+        for(Member m : repository.findAll()){
+            System.out.println(m.getId() + " " +m.getName() );
+        }
+    }
 }

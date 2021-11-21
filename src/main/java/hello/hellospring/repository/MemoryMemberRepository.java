@@ -6,7 +6,10 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository{
 
+    // members 객체 저장하는 공간.
     private static Map<Long, Member> store = new HashMap<>();
+
+    // id
     private static long sequence = 0L;
 
     @Override
@@ -37,5 +40,11 @@ public class MemoryMemberRepository implements MemberRepository{
 
     public void clearStore(){
         store.clear();
+    }
+
+    public void printStore(){
+        for(Member m : store.values()){
+            System.out.println(m.getId() +" " + m.getName());
+        }
     }
 }
