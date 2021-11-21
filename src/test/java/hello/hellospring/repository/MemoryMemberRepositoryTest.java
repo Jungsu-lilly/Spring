@@ -90,8 +90,12 @@ class MemoryMemberRepositoryTest{
         repository.save(m2);
         repository.save(m3);
 
-        repository.printStore();
-        System.out.println(repository.findAll());
+        //System.out.println(repository.findAll());
+        List<Member> li = repository.findAll();
+        for(int i=0;i<li.size();i++){
+            System.out.println(li.get(i).getName());
+        }
+
         for(Member m : repository.findAll()){
             System.out.println(m.getId() + " " +m.getName() );
         }
