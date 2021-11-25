@@ -22,6 +22,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-string")
+
     @ResponseBody   // http body 부에 JSON(default) 로 반환.
     public String helloString(@RequestParam("name") String name){
         return "hello "+ name;

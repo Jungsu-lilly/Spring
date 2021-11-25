@@ -17,4 +17,5 @@ public interface MemberRepository {
 
     /* 전부 출력 */
     List<Member> findAll();
+
 }
