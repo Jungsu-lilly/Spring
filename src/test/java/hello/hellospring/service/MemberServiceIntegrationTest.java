@@ -13,8 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@SpringBootTest
-@Transactional // 테스트가 끝나면 데이터베이스를 롤백.
+@SpringBootTest // 스프링 컨테이너 사용 가능.
+@Transactional // 테스트가 끝나면 데이터베이스 롤백.
 class MemberServiceIntegrationTest {
 
     @Autowired MemberService memberService;
