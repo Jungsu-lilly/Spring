@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 /*
-* 저장소룰 local 하게 만듬. memberReposirtory 인터페이스*/
+* 저장소룰 local 하게 만듬. memberRepository 인터페이스*/
 public class MemoryMemberRepository implements MemberRepository{
 
     // members 객체 저장하는 공간.
